@@ -259,7 +259,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -333,128 +332,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cc8f8add974bbb41aca827921cb3e3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  latitude: 0
-  longitude: 0
-  altitude: 0
-  gamemanagerObject: {fileID: 1162239843}
-  lockMouse: 1
-  hideMouse: 1
-  horizontalSpeed: 6.6
-  verticalSpeed: 40000
-  rotationalSpeed: 0.1
-  lastRotationAlignTime: 0
-  longitudeInput:
-    m_Name: Longitude Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: f8afb2e6-03c4-4abd-9544-0512e53fa847
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: 23c71bdb-b636-4b5d-b379-801034b63abf
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Longitude Input
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: 5a4b0ffb-953d-4dcf-80c0-082774f14cc2
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Longitude Input
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 645f48b3-65aa-462b-ac82-f6e406ef36a0
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Longitude Input
-      m_Flags: 8
-    m_Flags: 0
-  latitudeInput:
-    m_Name: Latitude Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: a8f74f5c-f9e4-4288-8120-8534ef1a1731
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: 7b7c1769-3e9d-438b-81d9-16422c7915a5
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Latitude Input
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: 29ba7968-1e27-4062-aca6-0dcea429bd76
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Latitude Input
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 504305c9-89af-491f-be07-fb7a0ba49090
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Latitude Input
-      m_Flags: 8
-    m_Flags: 0
-  altitudeInput:
-    m_Name: Altitude Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 6ae40ff4-ff5d-47e5-8f3d-13f32f19e12b
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 1D Axis
-      m_Id: e308fb9e-a4b7-47bb-9794-b62bbe59ee5a
-      m_Path: 1DAxis
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Altitude Input
-      m_Flags: 4
-    - m_Name: negative
-      m_Id: 15949081-f1bc-448b-8a50-198bdff56379
-      m_Path: <Keyboard>/shift
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Altitude Input
-      m_Flags: 8
-    - m_Name: positive
-      m_Id: 5c0f49a3-76c6-4e90-9b54-575e86b6729d
-      m_Path: <Keyboard>/space
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Altitude Input
-      m_Flags: 8
-    m_Flags: 0
-  mousePosition: {x: 0, y: 0}
 --- !u!1 &1162239843
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,18 +362,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textAsset: {fileID: 4900000, guid: 39719be88a9c29045ab1b75543436853, type: 3}
+  jsonText: 
+  username: 
+  password: 
+  lastRequestTime: 0
+  lastPlanePlaceTime: 0
+  planeObjects: []
   earthPrefab: {fileID: 132870, guid: 27fe6d2a15a377f4587f716a2d37ca8a, type: 3}
   earth: {fileID: 0}
   earthSpinScript: {fileID: 0}
-  username: Su386
-  password: 9H3L@nwrKvnHeDQ
-  RADIUS: 1000
-  ALTITUDE_SCALE_FACTOR: 7.5
-  lastRequestTime: 0
-  lastPlanePlaceTime: 0
-  lastRequestResponseTime: 0
-  lastSortTime: 0
-  jsonText: 
+  radius: 500
 --- !u!4 &1162239845
 Transform:
   m_ObjectHideFlags: 0
@@ -511,35 +386,4 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2123369796
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2123369797}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2123369797
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2123369796}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -363.42603, y: 754.0236, z: -589.01733}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
